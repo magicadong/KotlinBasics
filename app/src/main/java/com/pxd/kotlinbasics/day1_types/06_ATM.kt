@@ -24,6 +24,7 @@ import kotlin.system.exitProcess
 是否继续？(y/n):
  */
 fun main() {
+
     val password = 123
     var wrongTime = 3
     var totalMoney = 1000
