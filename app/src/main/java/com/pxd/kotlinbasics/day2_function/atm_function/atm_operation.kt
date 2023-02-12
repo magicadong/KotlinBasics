@@ -118,6 +118,7 @@ fun saveMoney(){
     showMessageln("存款成功 余额为: $totalMoney")
 
 }
+
 fun quit(){
     exit("感谢您的使用 再见!!")
 }
