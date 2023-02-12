@@ -36,6 +36,11 @@ fun loadData(url:String, task:(String?,Int?)->Unit){
 }
 
 
+fun Array<Int>.myForEach(task:(Int)->Unit){
+    for (value in this){
+        task(value)
+    }
+}
 fun Array<Int>.myForEach(task:(Int,Int)->Unit){
     for ((index, value) in this.withIndex()){
         task(index,value)
