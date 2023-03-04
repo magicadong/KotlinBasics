@@ -30,3 +30,6 @@ package com.pxd.kotlinbasics.day4_class.management_system
  *
  * 选择切换账号
  */
+fun main() {
+
+}
