@@ -1,6 +1,7 @@
 package com.pxd.kotlinbasics.day6_demo.manager
 
 import com.pxd.kotlinbasics.day6_demo.models.User
+import com.pxd.kotlinbasics.day6_demo.utils.Tools
 import com.pxd.kotlinbasics.day6_demo.utils.Type_Administrator
 import com.pxd.kotlinbasics.day6_demo.utils.Type_Student
 import com.pxd.kotlinbasics.day6_demo.utils.Type_Teacher
@@ -23,21 +24,16 @@ class StudentSystemManager{
             println("登录成功")
 
             user.load()
+
+
         }
     }
 
     //登录
     private fun login():User?{
-        return try {
-            print("请输入用户名:")
-            val name = readLine()!!
-            print("请输入密码:")
-            val pwd = readLine()!!
-            //判断用户是否存在 或者 用户的类型
-            SmsCenter.userManager.verifyUser(name, pwd)
-        }catch (e:Exception){
-            println("输入有误！")
-            null
-        }
+        val name = Tools.inputString("登录 请输入用户名")
+        val pwd = Tools.inputString("登录 请输入密码")
+        //判断用户是否存在 或者 用户的类型
+        return SmsCenter.userManager.verifyUser(name, pwd)
     }
 }

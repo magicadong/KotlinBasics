@@ -57,6 +57,28 @@ fun main() {
     SmsCenter.smsManager.start()
 }
 
+/**
+ * SmsCenter -> smsManager -> Start()
+     *                         -> userManager -> addDefaultAdmin()
+     *                         -> login()
+     *                              -> userManager -> verifyUser()
+     *                              -> user -> load()
+ *
+ * 1. 从0-1写项目
+ *  找对象
+ *  抽类
+ *  梳理类与类之间的关系
+ *  类图
+ *  写功能的时序图
+ *  写代码
+ *  迭代
+ *
+ * 2. 阅读别人的代码
+ *  首先找到入口点
+ *  理清程序的执行顺序
+ *  类图 -> 把控全局
+ *  梳理复杂功能的时序图
+ */
 
 
 

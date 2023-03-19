@@ -29,4 +29,21 @@ object Tools {
             "输入不合法 ".show()
         }
     }
+
+    //从终端输入一个字符串
+    fun inputString(msg:String):String{
+        print("$msg:")
+        return readLine()!!
+    }
+    //从终端输入一个整数
+    fun inputInt(msg:String):Int{
+        while (true) {
+            print("$msg:")
+            try {
+                return readLine()!!.toInt()
+            } catch (e: Exception) {
+                print("输入有误 ")
+            }
+        }
+    }
 }
