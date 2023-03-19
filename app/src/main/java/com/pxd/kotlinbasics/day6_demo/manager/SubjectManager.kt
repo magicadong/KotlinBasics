@@ -5,7 +5,7 @@ import com.pxd.kotlinbasics.day6_demo.utils.IdGenerator
 
 class SubjectManager {
     //管理所有课程
-    private val subjects = arrayListOf<Subject>()
+    var subjects = arrayListOf<Subject>()
 
     //添加课程
     fun addSubject(name:String,teacherId:Int,grade:Int):Int{

@@ -11,7 +11,8 @@ import com.pxd.kotlinbasics.day6_demo.utils.Type_Teacher
 
 class UserManager {
     //保存所有用户信息
-    private val users = arrayListOf<User>()
+    var users = arrayListOf<User>()
+
     //所有老师信息
     val teachers:List<Teacher>
         get() {

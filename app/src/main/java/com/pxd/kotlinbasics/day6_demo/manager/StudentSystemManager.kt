@@ -1,32 +1,28 @@
 package com.pxd.kotlinbasics.day6_demo.manager
 
 import com.pxd.kotlinbasics.day6_demo.models.User
-import com.pxd.kotlinbasics.day6_demo.utils.Tools
-import com.pxd.kotlinbasics.day6_demo.utils.Type_Administrator
-import com.pxd.kotlinbasics.day6_demo.utils.Type_Student
-import com.pxd.kotlinbasics.day6_demo.utils.Type_Teacher
+import com.pxd.kotlinbasics.day6_demo.utils.*
 import java.util.Scanner
 
 class StudentSystemManager{
     //启动系统
     fun start(){
-        //添加默认的管理员
-        SmsCenter.userManager.addDefaultAdmin()
+        //加载基础数据
+        loadData()
 
         //登录
-        while(true) {
+        while (true) {
             val user = login()
             if (user == null) {
                 println("登录失败！")
-                continue
+            }else{
+                while (true) {
+                    user.load()
+                }
             }
-
-            println("登录成功")
-
-            user.load()
-
-
         }
+
+
     }
 
     //登录

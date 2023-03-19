@@ -4,4 +4,5 @@ object SmsCenter {
     val smsManager = StudentSystemManager()
     val userManager = UserManager()
     val subjectManager = SubjectManager()
+    val fileManager = FileManager()
 }
